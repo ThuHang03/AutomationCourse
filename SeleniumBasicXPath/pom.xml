@@ -47,5 +47,12 @@
             <version>2.4</version>
             <classifier>jdk15</classifier>
         </dependency>
+        <!--        CHROME VERSION 119-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-devtools-v119</artifactId>
+            <version>4.15.0</version>
+        </dependency>
+
     </dependencies>
 </project>

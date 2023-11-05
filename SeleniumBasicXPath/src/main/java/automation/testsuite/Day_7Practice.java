@@ -13,7 +13,7 @@ public class Day_7Practice extends CommonBase {
     }
 
     @Test
-    public void test(){
+    public void test() {
         System.out.println("success");
     }
 }
