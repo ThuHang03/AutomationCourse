@@ -3,6 +3,7 @@ package automation.common;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterTest;
 
 import java.time.Duration;
 
@@ -18,5 +19,18 @@ public class CommonBase {
         driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         return driver;
+    }
+
+    @AfterTest
+    public void closeWeb() {
+        driver.close();
+    }
+
+    public void sleepPage(int millisecond) {
+        try {
+            Thread.sleep(millisecond);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
