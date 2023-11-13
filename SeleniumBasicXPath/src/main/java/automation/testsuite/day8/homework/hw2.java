@@ -13,8 +13,8 @@ public class hw2 extends CommonBase {
 
     @Test
     public void runTest() {
-        System.out.println("Name : " + driver.findElement(By.id("name")));
-        System.out.println("Address : " + driver.findElement(By.id("address")));
+        System.out.println("Name : " + driver.findElement(By.xpath("//input[@title='Email']")));
+        System.out.println("Address : " + driver.findElement(By.xpath("//input[@title='Password']")));
         System.out.println("Email : " + driver.findElement(By.id("email")));
         System.out.println("Password : " + driver.findElement(By.name("password")));
 

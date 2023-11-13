@@ -21,7 +21,7 @@ public class CommonBase {
         return driver;
     }
 
-    @AfterTest
+
     public void closeWeb() {
         driver.close();
     }
