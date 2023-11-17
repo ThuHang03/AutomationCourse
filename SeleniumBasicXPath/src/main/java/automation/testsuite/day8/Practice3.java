@@ -18,6 +18,8 @@ public class Practice3 extends CommonBase {
         System.out.println("Password : " + driver.findElement(By.id("pass")));
         System.out.println("Company : " + driver.findElement(By.name("company")));
         System.out.println("Phone Number : " + driver.findElement(By.name("mobile number")));
+
+
     }
 
     @AfterMethod
