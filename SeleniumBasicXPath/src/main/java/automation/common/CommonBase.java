@@ -26,7 +26,7 @@ public class CommonBase {
         driver.close();
     }
 
-    public void sleepPage(int millisecond) {
+    public void pausePage(int millisecond) {
         try {
             Thread.sleep(millisecond);
         } catch (InterruptedException e) {
