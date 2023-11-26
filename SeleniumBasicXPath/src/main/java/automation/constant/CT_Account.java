@@ -1,4 +1,14 @@
 package automation.constant;
 
+import org.openqa.selenium.By;
+
 public class CT_Account {
+    public static String RISE_URL = "https://rise.fairsketch.com/signin";
+    public static By TEXTBOX_EMAIL = By.id("email");
+    public static By TEXTBOX_PASS = By.id("password");
+
+    public static By BUTTON_SIGNIN = By.xpath("//button[normalize-space()='Sign in']");
+    public static By DASHBOARD_TEXT = By.xpath("//span[text()='Dashboard']");
+
+    public static By STATUS_LOGIN = By.xpath("//div[@role='alert']");
 }

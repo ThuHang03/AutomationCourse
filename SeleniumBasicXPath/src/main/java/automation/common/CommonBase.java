@@ -17,13 +17,15 @@ public class CommonBase {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get(URL);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;
     }
 
 
     public void closeWeb() {
-        driver.close();
+        if(driver!=null)
+            driver.close();
+
     }
 
     public void pausePage(int millisecond) {
