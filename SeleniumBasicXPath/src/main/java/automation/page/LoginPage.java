@@ -14,7 +14,7 @@ public class LoginPage {
     public void loginFunction(String emailValue, String passValue) {
         WebElement pass = driver.findElement(CT_Account.TEXTBOX_PASS);
         WebElement email = driver.findElement(CT_Account.TEXTBOX_EMAIL);
-        WebElement signin = driver.findElement(CT_Account.BUTTON_SIGNIN);
+        WebElement signin = driver.findElement(CT_Account.BTN_SIGNING);
 
         if (email.isEnabled()) {
             email.clear();
