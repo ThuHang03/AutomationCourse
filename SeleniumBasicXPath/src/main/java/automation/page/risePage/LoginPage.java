@@ -1,8 +1,9 @@
-package automation.page;
+package automation.page.risePage;
 
 import automation.constant.CT_Account;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class LoginPage {
     private WebDriver driver;
@@ -27,6 +28,12 @@ public class LoginPage {
         }
 
         signin.click();
+    }
 
+    public void logoutFunction() {
+        driver.findElement(CT_Account.USER_DROPDOWN).click();
+        driver.findElement(CT_Account.BTN_LOGOUT).click();
+
+        Assert.assertTrue(driver.findElement(CT_Account.BTN_SIGNING).isDisplayed());
     }
 }

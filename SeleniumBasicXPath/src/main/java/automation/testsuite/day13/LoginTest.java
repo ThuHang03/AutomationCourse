@@ -2,13 +2,16 @@ package automation.testsuite.day13;
 
 import automation.common.CommonBase;
 import automation.constant.CT_Account;
-import automation.page.LoginPage;
+import automation.page.risePage.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTest extends CommonBase {
+
+    LoginPage login = new LoginPage(driver);
+
     @BeforeMethod
     public void openChrome() {
         driver = initChromeDriver(CT_Account.RISE_URL);
@@ -16,7 +19,6 @@ public class LoginTest extends CommonBase {
 
     @Test(priority = 1)
     public void loginSuccessfully() {
-        LoginPage login = new LoginPage(driver);
         login.loginFunction("admin@demo.com", "riseDemo");
 
         Assert.assertTrue(driver.findElement(CT_Account.DASHBOARD_TEXT).isDisplayed());
@@ -48,11 +50,9 @@ public class LoginTest extends CommonBase {
 
     @Test(priority = 5)
     public void Logout() {
-        loginSuccessfully();
-        driver.findElement(CT_Account.USER_DROPDOWN).click();
-        driver.findElement(CT_Account.BTN_LOGOUT).click();
+        login.loginFunction("admin@demo.com", "riseDemo");
+        login.logoutFunction();
 
-        Assert.assertTrue(driver.findElement(CT_Account.BTN_SIGNING).isDisplayed());
     }
 
     @AfterMethod
