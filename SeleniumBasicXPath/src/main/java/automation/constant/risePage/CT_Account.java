@@ -1,4 +1,4 @@
-package automation.constant;
+package automation.constant.risePage;
 
 import org.openqa.selenium.By;
 

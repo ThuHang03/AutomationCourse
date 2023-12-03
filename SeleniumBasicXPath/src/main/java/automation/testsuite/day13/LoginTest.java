@@ -1,7 +1,7 @@
 package automation.testsuite.day13;
 
 import automation.common.CommonBase;
-import automation.constant.CT_Account;
+import automation.constant.risePage.CT_Account;
 import automation.page.risePage.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

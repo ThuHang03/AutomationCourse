@@ -1,6 +1,6 @@
 package automation.page.risePage;
 
-import automation.constant.CT_Account;
+import automation.constant.risePage.CT_Account;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
