@@ -4,6 +4,7 @@ import automation.common.CommonBase;
 import automation.constant.risePage.CT_Account;
 import automation.page.risePage.ClientPage;
 import automation.page.risePage.LoginPage_Factory;
+import automation.page.trizzenPage.Client;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -21,7 +22,8 @@ public class ClientTest extends CommonBase {
         login.loginFunction("admin@demo.com","riseDemo");
 
         ClientPage client = new ClientPage(driver);
-        client.addClientFunction("Hangg Company","Sara Ann");
+        Client clientData = new Client("Hangg Company","123 trung van", "Ha Noi","VN","12000","HN","0332145678","rise.fairsketch.com","123","123","Symbol");
+        client.addClientFunction(clientData);
 
         pausePage(2000);
         Assert.assertTrue(driver.findElement(By.xpath("//a[text()='Hangg Company']")).isDisplayed());

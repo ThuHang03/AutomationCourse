@@ -12,6 +12,12 @@ public class TrizenPage extends CommonBase {
 
     WebDriver driver;
 
+    @FindBy(xpath = "//div[@id='one-way']//label[text()='Flying from']//following-sibling::div//input[@placeholder='City or airport']")
+    WebElement textBoxFlyingFrom;
+
+    @FindBy(xpath = "//div[@id='one-way']//label[text()='Flying to']//following-sibling::div//input[@placeholder='City or airport']")
+    WebElement textBoxFlyingTo;
+
     @FindBy(xpath = "//div[@id='one-way']//input[@name='daterange-single']")
     WebElement textDepartingDate;
 
@@ -20,6 +26,15 @@ public class TrizenPage extends CommonBase {
 
     @FindBy(xpath = "//div[@id='one-way']//label[text()='Adults']//following-sibling::div//i[@class='la la-plus']")
     WebElement addAdult;
+
+    @FindBy(xpath = "//div[@id='one-way']//button[@title='Economy']")
+    WebElement dropdownCoach;
+
+    @FindBy(xpath = "//a[@id='bs-select-3-1']")
+    WebElement valueCoach;
+
+    @FindBy(xpath = "//div[@id='one-way']//a[text()='Search Now']")
+    WebElement btnSearchNow;
 
     public TrizenPage(WebDriver driver) {
         this.driver = driver;
@@ -33,9 +48,30 @@ public class TrizenPage extends CommonBase {
         textDepartingDate.clear();
         textDepartingDate.sendKeys("14012024");
         textDepartingDate.sendKeys(Keys.TAB);
+    }
 
-        pausePage(1000);
+    public void insertFlying(String flyingFrom , String flyingTo){
+        textBoxFlyingFrom.sendKeys(flyingFrom);
+        textBoxFlyingTo.sendKeys(flyingTo);
+    }
+
+    public void choosePassengers(){
         dropPassengers.click();
         addAdult.click();
+
+    }
+
+    public void chooseCoach(){
+        dropdownCoach.click();
+        valueCoach.click();
+    }
+
+    public void searchFlights(String flyingFrom , String flyingTo){
+        insertFlying(flyingFrom,flyingTo);
+        handleDateTimeAndDropdownList();
+        pausePage(1000);
+        choosePassengers();
+        chooseCoach();
+        btnSearchNow.click();
     }
 }
