@@ -25,7 +25,7 @@ public class ClientTest extends CommonBase {
         Client clientData = new Client("Hangg Company","123 trung van", "Ha Noi","VN","12000","HN","0332145678","rise.fairsketch.com","123","123","Symbol");
         client.addClientFunction(clientData);
 
-        pausePage(2000);
+        pause(2000);
         Assert.assertTrue(driver.findElement(By.xpath("//a[text()='Hangg Company']")).isDisplayed());
     }
 }

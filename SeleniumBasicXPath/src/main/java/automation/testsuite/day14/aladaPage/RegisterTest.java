@@ -24,6 +24,6 @@ public class RegisterTest extends CommonBase {
 
     @AfterMethod
     public void close() {
-        closeWeb();
+        closeDriver();
     }
 }

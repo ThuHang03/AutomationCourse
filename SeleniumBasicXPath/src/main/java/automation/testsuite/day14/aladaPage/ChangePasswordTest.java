@@ -42,6 +42,6 @@ public class ChangePasswordTest extends CommonBase {
 
     @AfterMethod
     public void close() {
-        closeWeb();
+        closeDriver();
     }
 }

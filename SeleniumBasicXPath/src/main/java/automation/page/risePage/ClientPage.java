@@ -117,17 +117,17 @@ public class ClientPage extends CommonBase {
         textBoxVAT.sendKeys(client.getVAT());
         textBoxGST.sendKeys(client.getGST());
         dropdownBoxClientGroup.click();
-        pausePage(1000);
+        pause(1000);
         valueClientGroup.click();
         dropdownCurrency.click();
-        pausePage(1000);
+        pause(1000);
         valueCurrency.click();
         textBoxCurrencySymbol.sendKeys(client.getCurrencySymbol());
         dropDownLabels.click();
-        pausePage(1000);
+        pause(1000);
         valueLabels.click();
         checkboxDisableOnlinePayment.click();
-        pausePage(1000);
+        pause(1000);
         btnSave.click();
     }
 
@@ -142,7 +142,7 @@ public class ClientPage extends CommonBase {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", clientsTab);
 
-        pausePage(2000);
+        pause(2000);
         textBoxSearch.sendKeys(companyName);
 
     }

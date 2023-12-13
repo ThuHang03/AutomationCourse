@@ -40,6 +40,6 @@ public class LoginTestFactory extends CommonBase {
 
     @AfterMethod
     public void closeDriver() {
-        closeWeb();
+        closeDriver();
     }
 }

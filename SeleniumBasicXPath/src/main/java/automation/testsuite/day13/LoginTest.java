@@ -57,6 +57,6 @@ public class LoginTest extends CommonBase {
 
     @AfterMethod
     public void closeDriver() {
-        closeWeb();
+        closeDriver();
     }
 }

@@ -19,7 +19,7 @@ public class TrizenTest extends CommonBase {
         TrizenPage trizen = new TrizenPage(driver);
         trizen.searchFlights("Ha Noi","Ho Chi Minh");
 
-        pausePage(2000);
+        pause(2000);
         Assert.assertTrue(driver.findElement(By.xpath("//h2[normalize-space()='Flight Search Result']")).isDisplayed());
     }
 }

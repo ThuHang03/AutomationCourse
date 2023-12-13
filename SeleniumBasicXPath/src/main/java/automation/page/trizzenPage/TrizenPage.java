@@ -69,7 +69,7 @@ public class TrizenPage extends CommonBase {
     public void searchFlights(String flyingFrom , String flyingTo){
         insertFlying(flyingFrom,flyingTo);
         handleDateTimeAndDropdownList();
-        pausePage(1000);
+        pause(1000);
         choosePassengers();
         chooseCoach();
         btnSearchNow.click();
