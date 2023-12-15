@@ -109,8 +109,8 @@ public class CommonBase {
         }
     }
 
-    public void waitAlert(){
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(initWaitTime));
+    public void waitAlert() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
         wait.until(ExpectedConditions.alertIsPresent());
     }
 
@@ -126,10 +126,11 @@ public class CommonBase {
         }
     }
 
-    public void waitAlert(long miniSecond){
+    public void waitAlert(long miniSecond) {
 
     }
-    public boolean isElementPresent(WebElement element){
+
+    public boolean isElementPresent(WebElement element) {
         return true;
     }
 }
