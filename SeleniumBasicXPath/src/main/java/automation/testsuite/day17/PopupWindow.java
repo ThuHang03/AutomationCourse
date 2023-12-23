@@ -3,15 +3,19 @@ package automation.testsuite.day17;
 import automation.common.CommonBase;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.Set;
 
 public class PopupWindow extends CommonBase {
     @BeforeMethod
-    public void openChrome() {
-        driver = initChromeDriver("https://demo.guru99.com/popup.php");
+    @Parameters("browser")
+    public void openChrome(String browser) {
+        setupDriver(browser);
+        driver.get("https://demo.guru99.com/popup.php");
     }
 
     @Test
@@ -31,6 +35,11 @@ public class PopupWindow extends CommonBase {
             }
         }
         driver.switchTo().window(mainWindow);
-        Assert.assertEquals(driver.getCurrentUrl(),"https://demo.guru99.com/popup.php");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://demo.guru99.com/popup.php");
+    }
+
+    @AfterMethod
+    public void close() {
+        closeDriver();
     }
 }

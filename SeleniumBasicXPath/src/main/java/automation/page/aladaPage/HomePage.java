@@ -27,9 +27,9 @@ public class HomePage extends CommonBase {
     @FindBy(xpath = "//a[text()='Thoát']")
     WebElement btn_logout;
 
-    public boolean IsHomePage() {
-        return isElementPresent(avatar);
-    }
+//    public boolean IsHomePage() {
+//        return isElementPresent(avatar);
+//    }
 
     public void openEditInformationUser() {
         avatar.click();

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-17T17:25:55 ICT" name="Default Suite" finished-at="2023-12-17T17:26:08 ICT" duration-ms="12897">
+    <groups>
+    </groups>
+    <test started-at="2023-12-17T17:25:55 ICT" name="SeleniumBasicXPath" finished-at="2023-12-17T17:26:08 ICT" duration-ms="12897">
+      <class name="automation.testsuite.day17.Ex2">
+        <test-method is-config="true" signature="openChrome(java.lang.String)[pri:0, instance:automation.testsuite.day17.Ex2@548a102f]" started-at="2023-12-17T17:25:55 ICT" name="openChrome" finished-at="2023-12-17T17:26:01 ICT" duration-ms="6195" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openChrome -->
+        <test-method signature="verifyChatZalo()[pri:0, instance:automation.testsuite.day17.Ex2@548a102f]" started-at="2023-12-17T17:26:01 ICT" name="verifyChatZalo" finished-at="2023-12-17T17:26:07 ICT" duration-ms="6350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyChatZalo -->
+        <test-method is-config="true" signature="close()[pri:0, instance:automation.testsuite.day17.Ex2@548a102f]" started-at="2023-12-17T17:26:07 ICT" name="close" finished-at="2023-12-17T17:26:08 ICT" duration-ms="272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- automation.testsuite.day17.Ex2 -->
+    </test> <!-- SeleniumBasicXPath -->
+  </suite> <!-- Default Suite -->
+</testng-results>

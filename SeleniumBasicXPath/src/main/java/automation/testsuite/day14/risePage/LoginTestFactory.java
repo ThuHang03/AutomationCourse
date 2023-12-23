@@ -31,6 +31,7 @@ public class LoginTestFactory extends CommonBase {
         Assert.assertFalse(isElementPresent(CT_Account.DASHBOARD_TEXT));
     }
 
+    //TODO  @Test(priority = 3)
     @Test(priority = 3)
     public void logout() {
         LoginPage_Factory login = new LoginPage_Factory(driver);

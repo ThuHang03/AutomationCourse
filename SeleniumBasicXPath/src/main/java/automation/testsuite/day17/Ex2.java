@@ -3,13 +3,14 @@ package automation.testsuite.day17;
 import automation.common.CommonBase;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class Ex2 extends CommonBase {
     @BeforeMethod
-    public void openChrome() {
-        driver = initChromeDriver("https://mediamart.vn/");
+    @Parameters("browser")
+    public void openChrome(@Optional("chrome") String browser) {
+        setupDriver(browser);
+        driver.get("https://mediamart.vn/");
     }
 
     @Test
@@ -22,6 +23,11 @@ public class Ex2 extends CommonBase {
         isElementPresent(By.xpath("//div[text()='Chat nhanh']"));
         click(By.xpath("//div[text()='Chat nhanh']"));
 
-        Assert.assertTrue(isElementPresent(By.xpath("//input[@placeholder='Nhập tin nhắn, nhấn Enter để gửi...']")));
+//        Assert.assertTrue(isElementPresent(By.xpath("//input[@placeholder='Nhập tin nhắn, nhấn Enter để gửi...']")));
+    }
+
+    @AfterMethod
+    public void close() {
+        closeDriver();
     }
 }

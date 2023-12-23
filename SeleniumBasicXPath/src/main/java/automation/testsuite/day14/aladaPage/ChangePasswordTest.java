@@ -25,7 +25,7 @@ public class ChangePasswordTest extends CommonBase {
 
         login.changePass(newPassword);
 
-        waitAlert(5);
+        waitAlert();
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals(alert.getText(), "Cập nhật mật khẩu mới thành công!");
         alert.accept();
